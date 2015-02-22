@@ -1,5 +1,5 @@
 ########################
-# ggplot learning
+# ggplot2 learning
 # Brian J. Enquist
 # February 22 2015
 #######################
@@ -40,6 +40,25 @@ myplot2 + geom_point(aes(color = color), size =6)
 
 #another way
 ggplot(d2, aes(carat, price, color=color)) + geom_point()
+
+
+library(MASS)
+ggplot(birthwt, aes(factor(race), bwt))+ geom_boxplot()
+head(birthwt)
+
+myplot3 <- ggplot(birthwt, aes(factor(race), bwt))+ geom_boxplot()
+summary(myplot3) #looking inside the ggplot object
+
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color=Species)) + 
+  geom_point() +
+  facet_grid(Species ~ .)  # dot is saying there is no other access that we want to subset
+# note y axis is shared and the x axis is repeated
+# or
+
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  geom_point() +
+  facet_wrap(~ Species)
+#
 
 #how to visualize them
 
