@@ -31,6 +31,11 @@ d2 <- diamonds[sample(1:dim(diamonds)[1],1000),]
 dim(diamonds)
 dim(diamonds)[1]
 
+#learn more http://docs.ggplot2.org/current/
+#http://docs.ggplot2.org/current/
+
+# done with lecture
+
 head(d2)
 
 myplot2 <- ggplot(data=d2, aes(x = carat, y = price))
@@ -75,3 +80,14 @@ head(iris)
 ddply(iris, .(Species), summarize)
 df <- melt (iris, id)
 dcast(df, Species ~ variable, mean)
+
+#i want hue will help you pick a palet
+# http:// tools.medialab.sciences-po.fr/iwanthue/
+
+## unfinished
+ggplot(birthwt, aes(factor(race), bwt)) +
+  geom_boxplot(width = .2) +
+  scale_y_continuous(labels = (pasteO(1:4, "Kg")), 
+  breaks                  )
+
+##
