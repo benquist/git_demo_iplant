@@ -20,3 +20,8 @@ getwd()
 setwd("/home/benquist/Desktop/iPlant/output")
 df <- read.delim("combined_gapMinder.tsv", sep='\t')
 
+df2 <- subset(df, country=="Afghanistan" | country == "Albania" | country == "Algeria")
+View(df2)
+
+
+
