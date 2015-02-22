@@ -60,6 +60,15 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   facet_wrap(~ Species)
 #
 
+library(RColorBrewer)
+display.brewer.all()
+
+#using melt
+df <-melt(iris, id.vars = "Species")  #click on df in the environment tab because we have melted it we can map it 
+ggplot(df, aes(Species, value, fill = variable)) +
+  geom_bar(stat = "identity", position = "dodge") + # dodge is putting all four measures together
+  scale_fill_brewer(palette = "Set1")
+
 #how to visualize them
 
 head(iris)
