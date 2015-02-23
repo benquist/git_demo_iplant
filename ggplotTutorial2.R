@@ -2,7 +2,6 @@
 # ggplot2 Demo and Instruction
 # Brian J. Enquist
 # February 22 2015
-#
 #######################
 
 
