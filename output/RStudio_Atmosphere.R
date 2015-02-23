@@ -2,11 +2,13 @@
 # ggplot2 atmosphere R script
 # Brian J. Enquist
 # February 22 2015
+#######################
 
-# load first three countries
-# Afghanistan
-# Albania
-#  Algeria  
+# Goal:
+# subset and load first three countries
+# Afghanistan, Albania, Algeria 
+# generate plots
+# create R markdown file for an html, word, and pdf report containing R output and plots
 
 #load the countries
 
@@ -53,7 +55,6 @@ geom_point(shape=21) +
   scale_colour_manual(values=cbPalette) +
   theme(legend.position="none")
 
-
 ggplot(subset(df2, country=="Algeria") , aes(x=year, y=GDP)) +
   geom_point(shape=21) +
   xlab(expression('year'))+
@@ -61,7 +62,6 @@ ggplot(subset(df2, country=="Algeria") , aes(x=year, y=GDP)) +
   theme_bw(base_size=12) +
   scale_colour_manual(values=cbPalette) +
   theme(legend.position="none")
-
 
 ggplot(subset(df2, country=="Albania") , aes(x=year, y=GDP)) +
   geom_point(shape=21) +
