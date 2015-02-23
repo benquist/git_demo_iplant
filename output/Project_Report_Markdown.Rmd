@@ -34,6 +34,7 @@ library(ggplot2)
 library(reshape2)
 library(ggthemes)
 library(plyr)
+
 getwd()
 setwd("/home/benquist/Desktop/iPlant/output")
 df <- read.delim("combined_gapMinder.tsv", sep='\t')
