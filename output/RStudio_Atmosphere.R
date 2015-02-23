@@ -43,9 +43,10 @@ head(df)
 df2$GDP <- df2$gdpPercap * df2$pop
 head(df2)
 
-#myplot <- ggplot(data=df2, aes(x = country, y = GDP, color=country))
+myplot <- ggplot(data=df2, aes(x = country, y = GDP, color=country))
 summary(myplot)
 myplot + geom_point() 
+
 
 ggplot(subset(df2, country=="Afghanistan") , aes(x=year, y=GDP)) +
 geom_point(shape=21) +
