@@ -1,5 +1,5 @@
 ########################
-# ggplot2 learning
+# ggplot2 Demo and Instruction
 # Brian J. Enquist
 # February 22 2015
 #######################
